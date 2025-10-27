@@ -24,7 +24,7 @@ if not st.session_state.user_profile == True:
     st.stop()
 
 
-MODEL_NAME = ""
+MODEL_NAME = "mlp_best_model"
 
 @st.cache_resource
 def load_model(model_name):
