@@ -16,14 +16,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app_utils import create_supabase_client
 
 if not st.user.is_logged_in:
-    st.error("Please log in to access the app")
+    st.error("Please log in to access the app!")
     st.stop()
 
 if not st.session_state.user_profile == True:
-    st.error("Please finish setting up the profile")
+    st.error("Let’s finish setting up your profile!")
     st.stop()
 
-st.title("📊 Recovery Dashboard")
+st.title("📈 Recovery Dashboard")
 
 # Load logs
 client = create_supabase_client()
