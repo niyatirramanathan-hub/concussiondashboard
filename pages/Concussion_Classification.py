@@ -16,11 +16,11 @@ import pickle
 
 
 if not st.user.is_logged_in:
-    st.error("Please log in to access the App")
+    st.error("Please log in to access the app!")
     st.stop()
 
 if not st.session_state.user_profile == True:
-    st.error("Please finish setting up the profile")
+    st.error("Let’s finish setting up your profile!")
     st.stop()
 
 
