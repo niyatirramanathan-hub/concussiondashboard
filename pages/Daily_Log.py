@@ -16,7 +16,7 @@ import uuid
 from app_utils import create_supabase_client
 
 if not st.user.is_logged_in:
-    st.error("Please log in to access the app")
+    st.error("Please log in to access the app!")
     st.stop()
 
 # if user's profile is already in the data base
@@ -96,7 +96,7 @@ with st.form("daily_log_form"):
         doctor_notes = st.text_area("Any new advice or change in medication?")
 
     # Recovery Indicators
-    st.subheader("🧩 Recovery Indicators")
+    st.subheader("🧠 Recovery Indicators")
     symptom_severity = st.slider(
         "How severe are your symptoms today?",
         1, 10, 5,
