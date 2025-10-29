@@ -35,7 +35,7 @@ def load_model(model_name):
 tabular_model = load_model(MODEL_NAME)
 
 # Title
-st.title("Soccer Concussion Classification")
+st.title("Concussion Detection")
 
 #Initialize session state for input fields
 for key, default in {"gender": "","issue": "","body_part_affected": ""}.items():
