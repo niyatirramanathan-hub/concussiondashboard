@@ -91,7 +91,7 @@ if st.button("Apply"):
 
         # Make prediction
         index = tabular_model.predict(embedding_array)
-        labels = ['Concussion', 'No Concussion']
+        labels = ['⚠️ Concussion detected: Please consult a doctor or healthcare professional for further evaluation and support.', '💪 All clear for now! You don’t appear to have a concussion, but keep an eye on how you feel. If new symptoms show up or things get worse, see a doctor.']
         injury_status = labels[index[0]]
 
         # Display prediction in Streamlit
