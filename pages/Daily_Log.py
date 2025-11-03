@@ -124,7 +124,7 @@ mood_choice = st.radio(
 
 st.divider()
 
-submitted = st.form_submit_button("Save Daily Log")
+submitted = st.button("Save Daily Log")
 if submitted:
 
     log_entry = {
