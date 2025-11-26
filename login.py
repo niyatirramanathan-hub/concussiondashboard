@@ -13,7 +13,7 @@ import time
 from datetime import datetime, date, timedelta
 from app_utils import create_supabase_client, calculate_age
 
-IMAGE_ADDRESS = "https://www.shutterstock.com/image-photo/doctor-healthcare-medicine-patient-talking-600nw-2191880035.jpg"
+IMAGE_ADDRESS = "https://cdn.creazilla.com/cliparts/34272/medical-doctor-patient-clipart-xl.png"
 
 
 def patient_profile_form(patient_id):
