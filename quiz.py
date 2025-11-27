@@ -11,6 +11,7 @@ def show_quiz():
         st.session_state.score = 0
         st.session_state.q1 = None
         st.session_state.q2 = None
+        st.session_state.q3 = None
 
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -27,6 +28,13 @@ def show_quiz():
         st.subheader("Question 2: After diagnosed a concussion, a player can be allowed to play again")
         st.session_state.q2 = st.radio(
             "After diagnosed a concussion, a player can be allowed to play again",
+            ["Yes", "No"],
+            index=None
+        )
+
+        st.subheader("Question 3: Is a concussion a head injury? ")
+        st.session_state.q3 = st.radio(
+            "Yes, a concussion is a traumatic brain injury, affecting the head",
             ["Yes", "No"],
             index=None
         )
@@ -52,6 +60,12 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is 'No'")
 
+                if st.session_state.q3 == "Yes":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer to question 3 is 'Yes'")
+                else:
+                    st.error("❌ Incorrect. The correct answer is 'Yes'")
+
                 st.rerun()   # Hides submit button immediately
 
     # SHOW RESULT AFTER SUBMISSION
@@ -63,6 +77,7 @@ def show_quiz():
             st.session_state.score = 0
             st.session_state.q1 = None
             st.session_state.q2 = None
+            st.session_state.q3 = None
             st.rerun()
 
     
