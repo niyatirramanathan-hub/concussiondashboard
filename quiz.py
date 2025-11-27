@@ -103,12 +103,6 @@ def show_quiz():
             index=None
         )
 
-        st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
-        st.session_state.q12 = st.radio(
-             " ",
-             ["True", "False"],
-             index=None
-         )
         submitted = st.button("Submit Quiz")
 
         if submitted:
