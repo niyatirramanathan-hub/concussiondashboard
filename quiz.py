@@ -20,6 +20,7 @@ def show_quiz():
         #st.session_state.q09 = None
         st.session_state.q10 = None
         st.session_state.q11 = None
+        st.session_state.q12 = None
 
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -82,7 +83,7 @@ def show_quiz():
             index=None
         )
 
-        st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
+        #st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
         # st.session_state.q09 = st.radio(
         #     " ",
         #     ["True", "False"],
@@ -100,6 +101,13 @@ def show_quiz():
         st.session_state.q11 = st.radio(
             " ",
             ["Tell them to shake it off", "Tell your coach", "Ignore it unless they ask for help"],
+            index=None
+        )
+
+        st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
+        st.session_state.q12 = st.radio(
+            " ",
+            ["True", "False"],
             index=None
         )
 
@@ -179,7 +187,13 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
 
+                if st.session_state.q12 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step."")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
                 st.rerun()   # Hides submit button immediately
+                
 
     # SHOW RESULT AFTER SUBMISSION
     else:
@@ -198,6 +212,7 @@ def show_quiz():
             st.session_state.q8 = None
             #st.session_state.q09 = None
             st.session_state.q10 = None
+            st.session_state.q11 = None
             st.session_state.q11 = None
             st.rerun()
 
