@@ -18,9 +18,8 @@ def show_quiz():
 
         st.header("Safety Quiz")
 
-        st.subheader("Question 1: Which symptom can be a sign of a concussion?")
+        st.subheader("Which symptom can be a sign of a concussion?")
         st.session_state.q1 = st.radio(
-            "All of the Above!",
             ["Headache", "Feeling “foggy”", "Nausea", "All of the above"],
             index=None
         )
