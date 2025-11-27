@@ -28,14 +28,14 @@ def show_quiz():
 
         st.subheader("Which symptom can be a sign of a concussion?")
         st.session_state.q1 = st.radio(
-            "                               ",
+            "",
             ["Headache", "Feeling “foggy”", "Nausea", "All of the above"],
             index=None
         )
 
         st.subheader("After being diagnosed with a concussion, a player can return to sports immediately.")
         st.session_state.q2 = st.radio(
-            "                                        ",
+            "",
             ["True", "False"],
             index=None
         )
