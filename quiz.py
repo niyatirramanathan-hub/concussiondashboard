@@ -16,6 +16,10 @@ def show_quiz():
         st.session_state.q5 = None
         st.session_state.q6 = None
         st.session_state.q7 = None
+        st.session_state.q8 = None
+        st.session_state.q9 = None
+        st.session_state.q10 = None
+        st.session_state.q11 = None
 
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -71,10 +75,39 @@ def show_quiz():
             index=None
         )
 
+        st.subheader("What is the FIRST step in return-to-play after a concussion?")
+        st.session_state.q8 = st.radio(
+            " ",
+            ["Full practice", "Light cognitive work and physical rest", "Sprinting drills", "Contact practice"],
+            index=None
+        )
+
+        st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
+        st.session_state.q9 = st.radio(
+            " ",
+            ["True", "False"],
+            index=None
+        )
+
+        st.subheader("Which reason do athletes MOST commonly hide symptoms?")
+        st.session_state.q10 = st.radio(
+            " ",
+            ["Fear of losing playing time", "Not wanting to let the team down", "Not recognizing the symptoms", "All of the above"],
+            index=None
+        )
+
+        st.subheader("If you see a teammate take a hit and look dazed, what’s the safest move?")
+        st.session_state.q11 = st.radio(
+            " ",
+            ["Tell them to shake it off", "Tell your coach", "Ignore it unless they ask for help"],
+            index=None
+        )
+
+
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None:
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None or st.session_state.q8 is None or st.session_state.q9 is None or st.session_state.q10 is None or st.session_state.q11 is None:
                 st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
@@ -122,6 +155,30 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **False**")
 
+                if st.session_state.q8 == "Light cognitive work and physical rest":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **Light cognitive work and physical rest**")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **Light cognitive work and physical rest**")
+
+                if st.session_state.q9 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+
+                if st.session_state.q10 == "All of the above":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
+
+                if st.session_state.q11 == "Tell your coach":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
+
                 st.rerun()   # Hides submit button immediately
 
     # SHOW RESULT AFTER SUBMISSION
@@ -138,6 +195,10 @@ def show_quiz():
             st.session_state.q5 = None
             st.session_state.q6 = None
             st.session_state.q7 = None
+            st.session_state.q8 = None
+            st.session_state.q9 = None
+            st.session_state.q10 = None
+            st.session_state.q11 = None
             st.rerun()
 
     
