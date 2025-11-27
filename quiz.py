@@ -42,8 +42,8 @@ def show_quiz():
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None:
-                st.warning("⚠️ Please answer both questions!")
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None:
+                st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
                 st.session_state.score = 0
@@ -70,7 +70,7 @@ def show_quiz():
 
     # SHOW RESULT AFTER SUBMISSION
     else:
-        st.success(f"🎉 You scored {st.session_state.score} out of 2!")
+        st.success(f"🎉 You scored {st.session_state.score} out of 3!")
 
         if st.button("Retake Quiz"):
             st.session_state.quiz_submitted = False
