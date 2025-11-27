@@ -69,6 +69,12 @@ news_data = [
         "image_url": "https://www.cognitivefxusa.com/hubfs/football-concussion-prevention-and-recovery.jpg",
         "link": "https://www.cognitivefxusa.com/blog/football-concussion-prevention-and-recovery"
     }
+    {
+        "title": "Concussion Basics",
+        "description": "For Everyone",
+        "image_url": "https://www.charliewaterslaw.com/wp-content/uploads/2020/06/concussion.jpg",
+        "link": "https://www.cdc.gov/heads-up/about/index.html"
+    }
 ]
 
 def main():
