@@ -2,8 +2,8 @@
 import streamlit as st
 
 def show_quiz():
-    st.title("🧠 Safety Knowledge Quiz")
-    st.write("Test your knowledge about football safety protocols and best practices.")
+    st.title("SAFETY KNOWLEDGE QUIZ")
+    st.write("Test your knowledge about the safety protocols and best practices when playing!")
 
     # Initialize session state
     if "quiz_submitted" not in st.session_state:
@@ -18,10 +18,10 @@ def show_quiz():
 
         st.header("Safety Quiz")
 
-        st.subheader("Question 1: You can Only Get a Concussion From a Clash of Heads")
+        st.subheader("Question 1: Which symptom can be a sign of a concussion?")
         st.session_state.q1 = st.radio(
-            "You can Only Get a Concussion From a Clash of Heads",
-            ["Yes", "No"],
+            "All of the Above!",
+            ["Headache", "Feeling “foggy”", "Nausea", "All of the above"],
             index=None
         )
 
@@ -50,9 +50,9 @@ def show_quiz():
 
                 if st.session_state.q1 == "No":
                     st.session_state.score += 1
-                    st.success("✅ Correct! The answer to question 1 is 'No'")
+                    st.success("✅ Correct! The answer to question 1 is **All of the above**")
                 else:
-                    st.error("❌ Incorrect. The correct answer is 'No'")
+                    st.error("❌ Incorrect. The correct answer to question 1 is **All of the above**")
 
                 if st.session_state.q2 == "No":
                     st.session_state.score += 1
