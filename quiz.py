@@ -19,7 +19,8 @@ def show_quiz():
         st.session_state.q8 = None
         st.session_state.q9 = None
         st.session_state.q10 = None
-        #st.session_state.q11 = None
+        st.session_state.q11 = None
+        st.session_state.q12 = None
         
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -82,37 +83,37 @@ def show_quiz():
             index=None
         )
 
-        #st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
-        # st.session_state.q09 = st.radio(
-        #     " ",
-        #     ["True", "False"],
-        #     index=None
-        # )
+        st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
+        st.session_state.q9 = st.radio(
+             " ",
+             ["True", "False"],
+             index=None
+         )
 
         st.subheader("Which reason do athletes MOST commonly hide symptoms?")
-        st.session_state.q9 = st.radio(
+        st.session_state.q10 = st.radio(
             " ",
             ["Fear of losing playing time", "Not wanting to let the team down", "Not recognizing the symptoms", "All of the above"],
             index=None
         )
 
         st.subheader("If you see a teammate take a hit and look dazed, what’s the safest move?")
-        st.session_state.q10 = st.radio(
+        st.session_state.q11 = st.radio(
             " ",
             ["Tell them to shake it off", "Tell your coach", "Ignore it unless they ask for help"],
             index=None
         )
 
         st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
-        # st.session_state.q11 = st.radio(
-        #     " ",
-        #     ["True", "False"],
-        #     index=None
-        # )
+        st.session_state.q12 = st.radio(
+             " ",
+             ["True", "False"],
+             index=None
+         )
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None or st.session_state.q8 is None or st.session_state.q9 is None or st.session_state.q10 is None: #or st.session_state.q11 is None:
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None or st.session_state.q8 is None or st.session_state.q9 is None or st.session_state.q10 is None or st.session_state.q11 is None or or st.session_state.q12 is None:
                 st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
@@ -166,35 +167,35 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **Light cognitive work and physical rest**")
 
-                # if st.session_state.q09 == "False":
-                #     st.session_state.score += 1
-                #     st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
-                # else:
-                #     st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                if st.session_state.q9 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
 
-                if st.session_state.q9 == "All of the above":
+                if st.session_state.q10 == "All of the above":
                     st.session_state.score += 1
                     st.success("✅ Correct! The answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
                 else:
                     st.error("❌ Incorrect. The correct answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
 
-                if st.session_state.q10 == "Tell your coach":
+                if st.session_state.q11 == "Tell your coach":
                     st.session_state.score += 1
                     st.success("✅ Correct! The answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
                 else:
                     st.error("❌ Incorrect. The correct answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
 
-                # if st.session_state.q11 == "False":
-                #     st.session_state.score += 1
-                #     st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
-                # else:
-                #     st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                if st.session_state.q12 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
                 st.rerun()   # Hides submit button immediately
                 
 
     # SHOW RESULT AFTER SUBMISSION
     else:
-        st.success(f"🎉 You scored {st.session_state.score} out of 11!")
+        st.success(f"🎉 You scored {st.session_state.score} out of 12!")
 
         if st.button("Retake Quiz"):
             st.session_state.quiz_submitted = False
@@ -209,7 +210,8 @@ def show_quiz():
             st.session_state.q8 = None
             st.session_state.q9 = None
             st.session_state.q10 = None
-            #st.session_state.q11 = None
+            st.session_state.q11 = None
+            st.session_state.q12 = None
             st.rerun()
 
     
