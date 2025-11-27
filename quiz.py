@@ -12,6 +12,7 @@ def show_quiz():
         st.session_state.q1 = None
         st.session_state.q2 = None
         st.session_state.q3 = None
+        st.session_state.q4 = None
 
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -27,22 +28,29 @@ def show_quiz():
 
         st.subheader("After being diagnosed with a concussion, a player can return to sports immediately.")
         st.session_state.q2 = st.radio(
-            "A concussion isn’t over when symptoms fade",
+            "Is a concussion over when symptoms fade?",
             ["True", "False"],
             index=None
         )
 
         st.subheader("When can a player return to play after a concussion diagnosis?")
         st.session_state.q3 = st.radio(
-            "Yes, a concussion is a traumatic brain injury, affecting the head",
+            " ",
             ["As soon as they feel better", "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider", "The next day", "Whenever the coach says it’s okay"],
+            index=None
+        )
+
+        st.subheader("Which symptoms mean you should seek emergency care immediately?")
+        st.session_state.q4 = st.radio(
+            " ",
+            ["Repeated vomiting", "One pupil larger than the other", "Slurred speech", "All of the above"],
             index=None
         )
 
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None:
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None:
                 st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
@@ -50,7 +58,7 @@ def show_quiz():
 
                 if st.session_state.q1 == "All of the above":
                     st.session_state.score += 1
-                    st.success("✅ Correct! The answer to question 1 is **All of the above**")
+                    st.success("✅ Correct! The answer is **All of the above**")
                 else:
                     st.error("❌ Incorrect. The correct answer to question 1 is **All of the above**")
 
@@ -66,11 +74,17 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **B**. Symptoms going away isn’t enough. Clearance only comes from a medical pro.")
 
+                if st.session_state.q4 == "All of the above":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **All of the above**")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **All of the above**")
+
                 st.rerun()   # Hides submit button immediately
 
     # SHOW RESULT AFTER SUBMISSION
     else:
-        st.success(f"🎉 You scored {st.session_state.score} out of 3!")
+        st.success(f"🎉 You scored {st.session_state.score} out of 4!")
 
         if st.button("Retake Quiz"):
             st.session_state.quiz_submitted = False
@@ -78,6 +92,7 @@ def show_quiz():
             st.session_state.q1 = None
             st.session_state.q2 = None
             st.session_state.q3 = None
+            st.session_state.q4 = None
             st.rerun()
 
     
