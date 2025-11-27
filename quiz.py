@@ -70,7 +70,7 @@ def show_quiz():
 
         st.subheader("True or false: It’s safe to return to play once symptoms go away for a few hours.")
         st.session_state.q7 = st.radio(
-            "",
+            "  ",
             ["True", "False"],
             index=None
         )
