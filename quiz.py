@@ -42,7 +42,7 @@ def show_quiz():
 
         st.subheader("When can a player return to play after a concussion diagnosis?")
         st.session_state.q3 = st.radio(
-            "When can a player return to play after a concussion diagnosis?",
+            "This is important!",
             ["As soon as they feel better", "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider", "The next day", "Whenever the coach says it’s okay"],
             index=None
         )
