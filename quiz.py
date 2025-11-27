@@ -18,7 +18,7 @@ def show_quiz():
         st.session_state.q7 = None
         st.session_state.q8 = None
         #st.session_state.q09 = None
-        st.session_state.q10 = None
+        st.session_state.q9 = None
         st.session_state.q11 = None
         
     # SHOW QUIZ ONLY IF NOT SUBMITTED
@@ -90,7 +90,7 @@ def show_quiz():
         # )
 
         st.subheader("Which reason do athletes MOST commonly hide symptoms?")
-        st.session_state.q10 = st.radio(
+        st.session_state.q9 = st.radio(
             " ",
             ["Fear of losing playing time", "Not wanting to let the team down", "Not recognizing the symptoms", "All of the above"],
             index=None
@@ -166,7 +166,7 @@ def show_quiz():
                 # else:
                 #     st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
 
-                if st.session_state.q10 == "All of the above":
+                if st.session_state.q9 == "All of the above":
                     st.session_state.score += 1
                     st.success("✅ Correct! The answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
                 else:
@@ -197,7 +197,7 @@ def show_quiz():
             st.session_state.q7 = None
             st.session_state.q8 = None
             #st.session_state.q09 = None
-            st.session_state.q10 = None
+            st.session_state.q9 = None
             st.session_state.q11 = None
             st.rerun()
 
