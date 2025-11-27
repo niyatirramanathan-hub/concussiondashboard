@@ -157,6 +157,22 @@ def main():
     """
                     )
 
+    # FAQ 3
+    with st.expander("3. When should I go doctor to look at my head injury? "):
+        st.markdown("""
+    ### 🚨 If the App Predicts a Concussion
+    If your symptoms on the Symptom tracking page are not showing a good trend, and you already 
+    stopped all physical activity, **Seek medical attention** from a doctor or certified athletic trainer
+
+    > 🛑 Ignoring concussion symptoms can worsen the injury.
+
+    This app provides **quick screening only** — it cannot:
+    - Measure severity
+    - Identify internal injuries
+    - Provide treatment
+    """
+                    )
+
 
 if __name__ == "__main__":
     main()
