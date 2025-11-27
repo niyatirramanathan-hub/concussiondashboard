@@ -49,56 +49,56 @@ def show_quiz():
 
         st.subheader("Which symptoms mean you should seek emergency care immediately?")
         st.session_state.q4 = st.radio(
-            " ",
+            "Which symptoms mean you should seek emergency care immediately?",
             ["Repeated vomiting", "One pupil larger than the other", "Slurred speech", "All of the above"],
             index=None
         )
 
         st.subheader("How soon after a head hit can symptoms show up?")
         st.session_state.q5 = st.radio(
-            " ",
+            "How soon after a head hit can symptoms show up?",
             ["Right away", "Hours later", "The next day", "Any of the above"],
             index=None
         )
 
         st.subheader("If you suspect a concussion during play, what’s the correct action?")
         st.session_state.q6 = st.radio(
-            " ",
+            "If you suspect a concussion during play, what’s the correct action?",
             ["Sit out immediately and tell a coach/parent", "Play one more play", "Wait to see if it gets worse", "Drink water and continue"],
             index=None
         )
 
         st.subheader("True or false: It’s safe to return to play once symptoms go away for a few hours.")
         st.session_state.q7 = st.radio(
-            " ",
+            "True or false: It’s safe to return to play once symptoms go away for a few hours.",
             ["True", "False"],
             index=None
         )
         
         st.subheader("What is the FIRST step in return-to-play after a concussion?")
         st.session_state.q8 = st.radio(
-            " ",
+            "What is the FIRST step in return-to-play after a concussion?",
             ["Full practice", "Light cognitive work and physical rest", "Sprinting drills", "Contact practice"],
             index=None
         )
 
         st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
         st.session_state.q9 = st.radio(
-             " ",
+             "True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.",
              ["True", "False"],
              index=None
          )
 
         st.subheader("Which reason do athletes MOST commonly hide symptoms?")
         st.session_state.q10 = st.radio(
-            " ",
+            "Which reason do athletes MOST commonly hide symptoms?",
             ["Fear of losing playing time", "Not wanting to let the team down", "Not recognizing the symptoms", "All of the above"],
             index=None
         )
 
         st.subheader("If you see a teammate take a hit and look dazed, what’s the safest move?")
         st.session_state.q11 = st.radio(
-            " ",
+            "If you see a teammate take a hit and look dazed, what’s the safest move?",
             ["Tell them to shake it off", "Tell your coach", "Ignore it unless they ask for help"],
             index=None
         )
