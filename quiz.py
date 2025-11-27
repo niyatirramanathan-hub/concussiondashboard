@@ -17,9 +17,8 @@ def show_quiz():
         st.session_state.q6 = None
         st.session_state.q7 = None
         st.session_state.q8 = None
-        #st.session_state.q09 = None
         st.session_state.q9 = None
-        st.session_state.q11 = None
+        st.session_state.q10 = None
         
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -97,7 +96,7 @@ def show_quiz():
         )
 
         st.subheader("If you see a teammate take a hit and look dazed, what’s the safest move?")
-        st.session_state.q11 = st.radio(
+        st.session_state.q10 = st.radio(
             " ",
             ["Tell them to shake it off", "Tell your coach", "Ignore it unless they ask for help"],
             index=None
@@ -172,7 +171,7 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **All of the above**. Pressure, fear, and not recognizing symptoms all play a role.")
 
-                if st.session_state.q11 == "Tell your coach":
+                if st.session_state.q10 == "Tell your coach":
                     st.session_state.score += 1
                     st.success("✅ Correct! The answer is **Tell your coach**. Early reporting protects them from a second injury, which is far more dangerous.")
                 else:
@@ -198,7 +197,7 @@ def show_quiz():
             st.session_state.q8 = None
             #st.session_state.q09 = None
             st.session_state.q9 = None
-            st.session_state.q11 = None
+            st.session_state.q10 = None
             st.rerun()
 
     
