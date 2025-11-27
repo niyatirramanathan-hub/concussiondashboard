@@ -9,7 +9,7 @@ def concussion_instructions():
 
     st.divider()
 
-    st.header("🚨 Immediate Actions on the Field")
+    st.header("IMMEDIATE ACTIONS ON THE FIELD")
     st.markdown("""
     **1. Stop the player immediately**
     The player must not continue playing under any circumstance.
@@ -32,7 +32,7 @@ def concussion_instructions():
 
     st.divider()
 
-    st.header("🏥 Medical Evaluation")
+    st.header("MEDICAL EVALUATION")
 
     st.markdown("""
     **5. Get medical assessment immediately**
@@ -44,7 +44,7 @@ def concussion_instructions():
 
     st.divider()
 
-    st.header("⏳ Recovery & Return to Play")
+    st.header("RECOVERY AND RETURN TO PLAY")
 
     st.markdown("""
     **7. Complete full physical and mental rest**
