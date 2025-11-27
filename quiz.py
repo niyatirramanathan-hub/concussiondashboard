@@ -74,7 +74,7 @@ def show_quiz():
             ["True", "False"],
             index=None
         )
-
+        
         st.subheader("What is the FIRST step in return-to-play after a concussion?")
         st.session_state.q8 = st.radio(
             " ",
