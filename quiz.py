@@ -213,7 +213,7 @@ def show_quiz():
             #st.session_state.q09 = None
             st.session_state.q10 = None
             st.session_state.q11 = None
-            st.session_state.q11 = None
+            st.session_state.q12 = None
             st.rerun()
 
     
