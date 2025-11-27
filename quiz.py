@@ -42,35 +42,35 @@ def show_quiz():
 
         st.subheader("When can a player return to play after a concussion diagnosis?")
         st.session_state.q3 = st.radio(
-            "                                         ",
+            "",
             ["As soon as they feel better", "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider", "The next day", "Whenever the coach says it’s okay"],
             index=None
         )
 
         st.subheader("Which symptoms mean you should seek emergency care immediately?")
         st.session_state.q4 = st.radio(
-            " ",
+            "",
             ["Repeated vomiting", "One pupil larger than the other", "Slurred speech", "All of the above"],
             index=None
         )
 
         st.subheader("How soon after a head hit can symptoms show up?")
         st.session_state.q5 = st.radio(
-            "  ",
+            "",
             ["Right away", "Hours later", "The next day", "Any of the above"],
             index=None
         )
 
         st.subheader("If you suspect a concussion during play, what’s the correct action?")
         st.session_state.q6 = st.radio(
-            "    ",
+            "",
             ["Sit out immediately and tell a coach/parent", "Play one more play", "Wait to see if it gets worse", "Drink water and continue"],
             index=None
         )
 
         st.subheader("True or false: It’s safe to return to play once symptoms go away for a few hours.")
         st.session_state.q7 = st.radio(
-            "      ",
+            "",
             ["True", "False"],
             index=None
         )
