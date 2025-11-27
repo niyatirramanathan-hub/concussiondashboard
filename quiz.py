@@ -20,21 +20,22 @@ def show_quiz():
 
         st.subheader("Which symptom can be a sign of a concussion?")
         st.session_state.q1 = st.radio(
+            "You don’t have to black out to have a concussion. Most athletes never do.",
             ["Headache", "Feeling “foggy”", "Nausea", "All of the above"],
             index=None
         )
 
-        st.subheader("Question 2: After diagnosed a concussion, a player can be allowed to play again")
+        st.subheader("After being diagnosed with a concussion, a player can return to sports immediately.")
         st.session_state.q2 = st.radio(
-            "After diagnosed a concussion, a player can be allowed to play again",
-            ["Yes", "No"],
+            "A concussion isn’t over when symptoms fade",
+            ["True", "False"],
             index=None
         )
 
-        st.subheader("Question 3: Is a concussion a head injury? ")
+        st.subheader("When can a player return to play after a concussion diagnosis?")
         st.session_state.q3 = st.radio(
             "Yes, a concussion is a traumatic brain injury, affecting the head",
-            ["Yes", "No"],
+            ["As soon as they feel better", "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider", "The next day", "Whenever the coach says it’s okay"],
             index=None
         )
 
@@ -47,23 +48,23 @@ def show_quiz():
                 st.session_state.quiz_submitted = True
                 st.session_state.score = 0
 
-                if st.session_state.q1 == "No":
+                if st.session_state.q1 == "All of the above":
                     st.session_state.score += 1
                     st.success("✅ Correct! The answer to question 1 is **All of the above**")
                 else:
                     st.error("❌ Incorrect. The correct answer to question 1 is **All of the above**")
 
-                if st.session_state.q2 == "No":
+                if st.session_state.q2 == "False":
                     st.session_state.score += 1
-                    st.success("✅ Correct! The answer to question 2 is 'No'")
+                    st.success("✅ Correct! The answer is **False**. Feeling “normal” doesn’t equal safe- only a healthcare professional can clear an athlete.")
                 else:
-                    st.error("❌ Incorrect. The correct answer is 'No'")
+                    st.error("❌ Incorrect. The correct answer is **False**. Feeling “normal” doesn’t equal safe- only a healthcare professional can clear an athlete.")
 
-                if st.session_state.q3 == "Yes":
+                if st.session_state.q3 == "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider":
                     st.session_state.score += 1
-                    st.success("✅ Correct! The answer to question 3 is 'Yes'")
+                    st.success("✅ Correct! The answer is **B**. Symptoms going away isn’t enough. Clearance only comes from a medical pro.")
                 else:
-                    st.error("❌ Incorrect. The correct answer is 'Yes'")
+                    st.error("❌ Incorrect. The correct answer is **B**. Symptoms going away isn’t enough. Clearance only comes from a medical pro.")
 
                 st.rerun()   # Hides submit button immediately
 
