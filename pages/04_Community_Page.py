@@ -68,7 +68,7 @@ news_data = [
         "description": "Prevention, Diagnosis, and Recovery",
         "image_url": "https://www.cognitivefxusa.com/hubfs/football-concussion-prevention-and-recovery.jpg",
         "link": "https://www.cognitivefxusa.com/blog/football-concussion-prevention-and-recovery"
-    }
+    },
     {
         "title": "Concussion Basics",
         "description": "For Everyone",
