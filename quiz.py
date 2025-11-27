@@ -28,21 +28,21 @@ def show_quiz():
 
         st.subheader("Which symptom can be a sign of a concussion?")
         st.session_state.q1 = st.radio(
-            "You don’t have to black out to have a concussion. Most athletes never do.",
+            "                               ",
             ["Headache", "Feeling “foggy”", "Nausea", "All of the above"],
             index=None
         )
 
         st.subheader("After being diagnosed with a concussion, a player can return to sports immediately.")
         st.session_state.q2 = st.radio(
-            "Is a concussion over when symptoms fade?",
+            "                                        ",
             ["True", "False"],
             index=None
         )
 
         st.subheader("When can a player return to play after a concussion diagnosis?")
         st.session_state.q3 = st.radio(
-            "This is important!",
+            "                                         ",
             ["As soon as they feel better", "After completing a step-by-step return-to-play plan and being cleared by a healthcare provider", "The next day", "Whenever the coach says it’s okay"],
             index=None
         )
