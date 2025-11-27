@@ -112,7 +112,7 @@ def show_quiz():
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None or st.session_state.q8 is None or st.session_state.q9 is None or st.session_state.q10 is None #or st.session_state.q11 is None:
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None or st.session_state.q8 is None or st.session_state.q9 is None or st.session_state.q10 is None: #or st.session_state.q11 is None:
                 st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
