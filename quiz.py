@@ -13,6 +13,9 @@ def show_quiz():
         st.session_state.q2 = None
         st.session_state.q3 = None
         st.session_state.q4 = None
+        st.session_state.q5 = None
+        st.session_state.q6 = None
+        st.session_state.q7 = None
 
     # SHOW QUIZ ONLY IF NOT SUBMITTED
     if not st.session_state.quiz_submitted:
@@ -47,10 +50,32 @@ def show_quiz():
             index=None
         )
 
+        st.subheader("How soon after a head hit can symptoms show up?")
+        st.session_state.q5 = st.radio(
+            " ",
+            ["Right away", "Hours later", "The next day", "Any of the above"],
+            index=None
+        )
+
+        st.subheader("If you suspect a concussion during play, what’s the correct action?")
+        st.session_state.q6 = st.radio(
+            " ",
+            ["Sit out immediately and tell a coach/parent", "Play one more play", "Wait to see if it gets worse", "Drink water and continue"],
+            index=None
+        )
+
+        st.subheader("True or false: It’s safe to return to play once symptoms go away for a few hours.")
+        st.session_state.q7 = st.radio(
+            " ",
+            ["True", "False"],
+            index=None
+        )
+
         submitted = st.button("Submit Quiz")
 
         if submitted:
-            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None:
+            if st.session_state.q1 is None or st.session_state.q2 is None or st.session_state.q3 is None or st.session_state.q4 is None 
+            or st.session_state.q5 is None or st.session_state.q6 is None or st.session_state.q7 is None:
                 st.warning("⚠️ Please answer all questions!")
             else:
                 st.session_state.quiz_submitted = True
@@ -80,6 +105,24 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **All of the above**")
 
+                if st.session_state.q5 == "Any of the above":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **Any of the above**")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **Any of the above**")
+
+                if st.session_state.q6 == "Sit out immediately and tell a coach/parent":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **Sit out immediately and tell a coach/parent**")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **Sit out immediately and tell a coach/parent**")
+
+                if st.session_state.q7 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**")
+
                 st.rerun()   # Hides submit button immediately
 
     # SHOW RESULT AFTER SUBMISSION
@@ -93,6 +136,9 @@ def show_quiz():
             st.session_state.q2 = None
             st.session_state.q3 = None
             st.session_state.q4 = None
+            st.session_state.q5 = None
+            st.session_state.q6 = None
+            st.session_state.q7 = None
             st.rerun()
 
     
