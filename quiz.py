@@ -183,7 +183,7 @@ def show_quiz():
 
     # SHOW RESULT AFTER SUBMISSION
     else:
-        st.success(f"🎉 You scored {st.session_state.score} out of 7!")
+        st.success(f"🎉 You scored {st.session_state.score} out of 11!")
 
         if st.button("Retake Quiz"):
             st.session_state.quiz_submitted = False
