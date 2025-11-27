@@ -17,7 +17,7 @@ def show_quiz():
         st.session_state.q6 = None
         st.session_state.q7 = None
         st.session_state.q8 = None
-        #st.session_state.q9 = None
+        st.session_state.q09 = None
         st.session_state.q10 = None
         st.session_state.q11 = None
 
@@ -83,11 +83,11 @@ def show_quiz():
         )
 
         st.subheader("True or false: If symptoms return during the return-to-play steps, the athlete should move to the next level anyway.")
-        #st.session_state.q9 = st.radio(
-        #     " ",
-        #     ["True", "False"],
-        #     index=None
-        # )
+        st.session_state.q09 = st.radio(
+            " ",
+            ["True", "False"],
+            index=None
+        )
 
         st.subheader("Which reason do athletes MOST commonly hide symptoms?")
         st.session_state.q10 = st.radio(
@@ -161,11 +161,11 @@ def show_quiz():
                 else:
                     st.error("❌ Incorrect. The correct answer is **Light cognitive work and physical rest**")
 
-                # if st.session_state.q9 == "False":
-                #     st.session_state.score += 1
-                #     st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
-                # else:
-                #     st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                if st.session_state.q09 == "False":
+                    st.session_state.score += 1
+                    st.success("✅ Correct! The answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
+                else:
+                    st.error("❌ Incorrect. The correct answer is **False**. If symptoms come back, the athlete stops and returns to the previous step.")
 
                 if st.session_state.q10 == "All of the above":
                     st.session_state.score += 1
@@ -196,7 +196,7 @@ def show_quiz():
             st.session_state.q6 = None
             st.session_state.q7 = None
             st.session_state.q8 = None
-            #st.session_state.q9 = None
+            st.session_state.q09 = None
             st.session_state.q10 = None
             st.session_state.q11 = None
             st.rerun()
