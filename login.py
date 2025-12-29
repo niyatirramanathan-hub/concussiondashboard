@@ -9,7 +9,7 @@ IMAGE_ADDRESS = "https://raw.githubusercontent.com/niyatirramanathan-hub/concuss
 
 
 def patient_profile_form(patient_id):
-    st.title("👤 Patient Profile")
+    st.title("👤 User Profile")
     st.write("Please fill in your basic information.")
 
     with st.form("profile_form"):
@@ -50,7 +50,7 @@ def patient_profile_form(patient_id):
 
 def main():
     if not st.user.is_logged_in:
-        st.title("Patient Log")
+        st.title("User Login")
         st.image(IMAGE_ADDRESS)
         if st.sidebar.button("Log in with Google", type="primary", icon=":material/login:"):
             st.login()
