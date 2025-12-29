@@ -5,7 +5,7 @@ import time
 from datetime import datetime, date, timedelta
 from app_utils import create_supabase_client, calculate_age
 
-IMAGE_ADDRESS = "/concussiondashboard/medical-doctor-patient-clipart-xl.png"
+IMAGE_ADDRESS = "/concussiondashboard/medical-doctor-patient-clipart-xl.png/"
 
 
 def patient_profile_form(patient_id):
