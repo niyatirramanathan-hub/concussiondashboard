@@ -36,7 +36,7 @@ for key, default in {"gender": "","issue": "","body_part_affected": ""}.items():
 # Input fields
 #Age
 st.session_state.age = st.number_input(
-    "Enter Age",
+    "Enter your age",
     min_value=3,
     max_value=70,
     value=st.session_state.age,
@@ -45,7 +45,7 @@ st.session_state.age = st.number_input(
 
 #Gender
 st.session_state.gender = st.selectbox(
-    "Enter The Gender", ("Male", "Female"),
+    "Enter your gender", ("Male", "Female"),
     index=0 if st.session_state.gender == "Male" else 1
 )
 
