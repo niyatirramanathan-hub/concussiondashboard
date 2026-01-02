@@ -15,7 +15,7 @@ def main():
     st.title("🏥 Safety & Health Hub")
     st.write("Explore our comprehensive resources for player safety and health management.")
     
-    tab1, tab2 = st.tabs(["🏗️ Take Safety Quiz", "❤️ Health"])
+    tab1, tab2 = st.tabs(["Take Safety Quiz", "Health"])
     
     with tab1:
         safety_tab()
