@@ -172,7 +172,7 @@ def main():
 
     # FAQ 4
     with st.expander("4. What symptoms mean I should call 911 right away?"):
-    st.markdown("""
+        st.markdown("""
     ### 🚨 When to Call 911 Immediately
     Call **911 or emergency services right away** if you or someone else experiences **any** of the following after a head injury:
     
@@ -196,7 +196,7 @@ def main():
 
     # FAQ 5
     with st.expander("5. How often should I re-check my symptoms?"):
-    st.markdown("""
+        st.markdown("""
     ### ⏱️ Re-Checking Your Symptoms
     After a head injury, it’s important to **monitor symptoms regularly**, even if they seem mild at first.
     
@@ -216,7 +216,7 @@ def main():
 
     # FAQ 6
     with st.expander("6. What should parents look out for after a head injury?"):
-    st.markdown("""
+        st.markdown("""
     ### 👨‍👩‍👧 What Parents Should Watch For
     After a head injury, parents should closely monitor their child for **physical, cognitive, and behavioral changes**, especially within the first **24–72 hours**.
     
