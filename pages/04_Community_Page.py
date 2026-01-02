@@ -70,7 +70,7 @@ news_data = [
 
 def main():
     # Page header
-    st.title("🌐 Community Page 🌟")
+    st.title("🌐 Community ")
 
     # Community Info section
     st.header("Community Info")
@@ -129,7 +129,7 @@ def main():
     - ✅ **Possible concussion**, or
     - ❌ **No concussion detected**
 
-    > ⚠️ **Important:** This app is meant to assist coaches, parents, and trainers with quick assessments.
+    > ⚠️ **Important:** This app is meant to assist players, coaches, parents, and trainers with quick assessments.
     > It does **not** replace professional medical diagnosis.
     """
                     )
@@ -138,7 +138,7 @@ def main():
     # FAQ 2
     with st.expander("2. What should I do if the app predicts a concussion?"):
         st.markdown("""
-    ### 🚨 If the App Predicts a Concussion
+    ### If the App Predicts a Concussion
     If the result indicates a **Concussion**, you should:
 
     1. **Immediately stop all physical activity**
@@ -157,9 +157,9 @@ def main():
     # FAQ 3
     with st.expander("3. When should I go doctor to look at my head injury? "):
         st.markdown("""
-    ### 🚨 If the App Predicts a Concussion
+    ### If the App Predicts a Concussion
     If your symptoms on the Symptom tracking page are not showing a good trend, and you already 
-    stopped all physical activity, **Seek medical attention** from a doctor or certified athletic trainer
+    stopped all physical activity, **seek medical attention** from a doctor
 
     > 🛑 Ignoring concussion symptoms can worsen the injury.
 
@@ -170,6 +170,74 @@ def main():
     """
                     )
 
+    # FAQ 4
+    with st.expander("4. What symptoms mean I should call 911 right away?"):
+    st.markdown("""
+### 🚨 When to Call 911 Immediately
+Call **911 or emergency services right away** if you or someone else experiences **any** of the following after a head injury:
+
+- Loss of consciousness (even briefly)
+- Seizures or convulsions
+- Repeated vomiting or nausea
+- Severe or worsening headache
+- Slurred speech or difficulty speaking
+- Unequal pupil size or vision problems
+- Extreme drowsiness or inability to wake up
+- Confusion, agitation, or unusual behavior
+- Weakness, numbness, or loss of coordination
+- Clear fluid or blood coming from the nose or ears
+
+> 🚑 **Do not wait for symptoms to improve.**  
+> These signs may indicate a **serious brain injury** that requires immediate medical care.
+
+This app is designed for **screening and awareness only** and is **not equipped to handle emergencies**.
+"""
+                )
+
+    # FAQ 5
+    with st.expander("5. How often should I re-check my symptoms?"):
+    st.markdown("""
+### ⏱️ Re-Checking Your Symptoms
+After a head injury, it’s important to **monitor symptoms regularly**, even if they seem mild at first.
+
+You should re-check your symptoms:
+- **Immediately after the injury**
+- **Every few hours on the first day**
+- **Once per day during recovery**
+- **Anytime symptoms worsen or new symptoms appear**
+
+> 🧠 Concussion symptoms can change over time and may appear **hours or even days later**.
+
+Tracking symptoms consistently helps identify negative trends and ensures you seek medical care at the right time.
+
+This app supports **ongoing symptom tracking**, but it does **not replace professional medical evaluation**.
+"""
+                )
+
+    # FAQ 6
+    with st.expander("6. What should parents look out for after a head injury?"):
+    st.markdown("""
+### 👨‍👩‍👧 What Parents Should Watch For
+After a head injury, parents should closely monitor their child for **physical, cognitive, and behavioral changes**, especially within the first **24–72 hours**.
+
+Watch for signs such as:
+- Headache or pressure in the head
+- Dizziness or balance problems
+- Nausea or vomiting
+- Sensitivity to light or noise
+- Trouble concentrating or remembering
+- Unusual mood changes (irritability, sadness, anxiety)
+- Changes in sleep patterns
+- Slower reaction time or confusion
+
+> 👀 Some symptoms may not appear immediately and can develop hours or days after the injury.
+
+If symptoms **worsen**, **persist**, or interfere with daily activities, seek medical attention from a doctor or certified athletic trainer.
+
+This app helps with **early awareness and tracking**, but it cannot diagnose or treat concussions.
+"""
+                )
+    
 
 if __name__ == "__main__":
     main()
