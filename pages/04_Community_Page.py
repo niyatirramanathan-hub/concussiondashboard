@@ -49,22 +49,22 @@ st.markdown("""
 # Sample news data
 news_data = [
     {
-        "title": "Concussion in Football",
-        "description": "When it comes to concussion, don’t take chances",
-        "image_url": "https://cdn.englandfootball.com/-/media/EnglandFootball/Hero/Desktop/learn/Brain-Health/20220812-concussion---hero.jpg?h=700&iar=0&w=1440&rev=3fa6bdd9610a4629ad063507804a1aa4&hash=25E5CEC7EB01A128C018492822EFE1DF",
-        "link": "https://www.englandfootball.com/concussion"
+        "title": "Researchers at the Forefront on Breakthrough Concussion Studies",
+        "description": "New study reveals that starting vision therapy right after a concussion can boost recovery by 8x—here’s why waiting could make things worse!",
+        "image_url": "https://www.salus.edu/news-stories/_files/images/mitch-scheiman-informal-headshot1.jpeg",
+        "link": "https://www.salus.edu/news-stories/2025/10/researchers-at-the-forefront-on-breakthrough-concussion-studies.html"
     },
     {
-        "title": "Football Concussions",
-        "description": "Prevention, Diagnosis, and Recovery",
-        "image_url": "https://www.cognitivefxusa.com/hubfs/football-concussion-prevention-and-recovery.jpg",
-        "link": "https://www.cognitivefxusa.com/blog/football-concussion-prevention-and-recovery"
+        "title": "Investigating the long-term impacts of concussions on youth athletes",
+        "description": "School of Medicine researcher Jessie Oldham is studying why athletes with a past concussion are more at risk of sustaining future musculoskeletal injuries like lower-body sprains and muscle tears.",
+        "image_url": "https://news.vcu.edu/image/07869e94-6abf-405d-a806-503a2ad7d6cf",
+        "link": "https://news.vcu.edu/article/youth-athlete-concussion-research"
     },
     {
-        "title": "Concussion Basics",
-        "description": "For Everyone",
-        "image_url": "https://www.charliewaterslaw.com/wp-content/uploads/2020/06/concussion.jpg",
-        "link": "https://www.cdc.gov/heads-up/about/index.html"
+        "title": "Eagles safety diagnosed with concussion after practice",
+        "description": "Eagles safety Marcus Epps has been added to the injury report after being diagnosed with a concussion.",
+        "image_url": "data:image/jpeg;base64,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",
+        "link": "https://www.nbcsportsphiladelphia.com/nfl/philadelphia-eagles/eagles-safety-diagnosed-with-concussion-after-practice/703989/"
     }
 ]
 
