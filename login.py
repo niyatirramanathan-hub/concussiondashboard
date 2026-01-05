@@ -82,7 +82,7 @@ def main():
             st.session_state.age = calculate_age(response.data[0]["dob"])
             st.session_state.user_profile = True
             st.subheader(f"Welcome to HeadCheckAI, {st.user.name}!")
-            st.info("Proceed to Daily Log. To check for a concussion, go to Concussion Checker page")
+            st.info("Proceed to Daily Log. To check for a concussion, go to the Concussion Detection page.")
         else:
             # Show profile form for new users
             new_profile = patient_profile_form(st.session_state.patient_id)
