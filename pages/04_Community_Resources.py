@@ -70,7 +70,7 @@ news_data = [
 
 def main():
     # Page header
-    st.title("🌐 Community ")
+    st.title("🌐 Community Resources")
 
     # Community Info section
     st.header("Community Info")
