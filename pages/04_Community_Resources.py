@@ -76,10 +76,10 @@ def main():
     st.header("Community Info")
     st.info("""
 
-    Stay updated with the latest **news**, **events**, and **announcements**. Scroll through the news cards below and click on any that **catch your eye** 👀 to learn more.
+    Stay updated with the latest **news**, **events**, and **announcements**! Scroll through the news below and click on any that **catch your eye** 👀 to learn more.
     """)
 
-    st.toast("Welcome to **our vibrant community!** ", icon="🎉", duration = 7)
+    st.toast("Welcome to **our community!** ", icon="🎉", duration = 7)
 
     # News cards section
     st.subheader("Latest News & Updates")
